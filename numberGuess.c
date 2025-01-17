@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define TRUE -1
-#define FALSE 0
+#define true -1
+#define false 0
 
 int main() {
 	srand(time(NULL));
@@ -14,7 +14,7 @@ int main() {
 	int random = rand() % 100 + 1;
 	int guessedNumber = 0;
 	int guesses = 0;
-	int bKeepGoing = TRUE;
+	int bKeepGoing = true;
 	while (bKeepGoing) {
 		guesses++;
 		printf("turn %d)\nEnter a guess between 1 and 100: ", guesses);
@@ -28,7 +28,7 @@ int main() {
 			continue;
 		}
 		printf("You Got It!\n");
-		bKeepGoing = FALSE;
+		bKeepGoing = false;
 	}
 	if (guesses < 7) {
 		printf("Great Job!\n");
