@@ -12,12 +12,12 @@ int main() {
 	scanf("%s", name);
 	printf("Nice to met you %s. Lets have some fun!\n", name);
 	int random = rand() % 100 + 1;
-	int guessedNumber = 0;
 	int guesses = 0;
 	int bKeepGoing = true;
 	while (bKeepGoing) {
 		guesses++;
 		printf("turn %d)\nEnter a guess between 1 and 100: ", guesses);
+		int guessedNumber = 0;
 		scanf("%d", &guessedNumber);
 		if (guessedNumber > random) {
 			printf("too high!\n");
