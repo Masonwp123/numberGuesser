@@ -10,7 +10,8 @@ print("Nice to meet you %s. Lets have some fun!", name)
 create int variable random assigned with random between 1 and 100
 create int variable guessedNumber assigned with 0
 create int variable guesses assigned with 0
-while gussedNumber != random:
+create bool variable keepGoing assigned with true
+while keepGoing:
     assign guesses with guesses + 1
     print("turn %d)", guesses)
     guessedNumber = input as int("Enter a guess between 1 and 100: ")
@@ -19,7 +20,9 @@ while gussedNumber != random:
         continue
     if (guessedNumber < random):
         print("too low")
-print("You got It!")
+        continue
+    print("You got It!")
+    assign keepGoing with false
 if (guesses < 7):
     print("Great job.")
     return;
