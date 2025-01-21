@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <time.h>
-
-#define true -1
-#define false 0
 
 int main() {
 	srand(time(NULL));
@@ -13,7 +11,7 @@ int main() {
 	printf("Nice to met you %s. Lets have some fun!\n", name);
 	int random = rand() % 100 + 1;
 	int guesses = 0;
-	int bKeepGoing = true;
+	bool bKeepGoing = true;
 	while (bKeepGoing) {
 		guesses++;
 		printf("turn %d)\nEnter a guess between 1 and 100: ", guesses);
